@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block contenidoQueCambia %}
+
+
+<div class="container">
+
+    <form action="/ingresoEquipaje" method="POST">
+        <label>Pasajero</label>
+        <input type="text" name="pasajero"/>
+        <label>Peso</label>
+        <input type="text" name="peso"/>
+        <label>Tipo</label>
+        <select name="tipo">
+            <option>Mano</option>
+            <option>Bodega</option>
+        </select>
+        {% csrf_token %}
+        <input type="submit" value="Enviar" />
+    </form>
+
+</div>
+
+
+{% endblock %}
